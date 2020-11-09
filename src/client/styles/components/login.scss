@@ -1,0 +1,145 @@
+$login-inp-color: rgb(243, 237, 66);
+$login-icon-btn-color: rgb(255, 250, 78);
+$register-link-color: rgb(97, 253, 80);
+
+@mixin align-items__center {
+    display: flex;
+    align-items: center;
+}
+
+.LoginCon {
+    // height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+}
+
+.LoginForm {
+    // width: 30%;
+    width: 430px;
+    height: 430px;
+    border: 3px solid rgb(225, 225, 227);
+    border-radius: 10px;
+    color: rgb(225, 225, 227);
+    box-shadow: 1px 1px 20px 10px rgb(73, 73, 73);
+}
+
+.LoginFormHeader {
+    height: 100px;
+    @include align-items__center;
+    justify-content: center;
+}
+
+.LoginIconCon {
+    @include align-items__center;
+    justify-content: center;
+    height: 80%;
+    width: 50%;
+}
+
+// .LoginIcon {
+//     // font-size: 60px;
+//     // color: rgb(100, 100, 100);
+// }
+
+.LoginIconCon {
+    div {
+        font-size: 60px;
+        // color: $login-icon-btn-color;
+        // color: rgb(80, 80, 80);
+        // color: rgb(225, 225, 227);
+        font-weight: bold;
+    }
+}
+
+.LoginInputCon {
+    height: 55%;
+    padding: 10px;
+}
+
+.LoginEmailCon,
+.LoginPasswordCon {
+    padding: 10px;
+    div {
+        font-size: 14px;
+    }
+}
+
+.LoginNameInp,
+.LoginPasswordInp {
+    width: 100%;
+    height: 35px;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    // color: $login-inp-color;
+    // color: black;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: rgb(20, 20, 22);
+    // border-bottom: 2px solid white;
+    border: 2px solid rgb(225, 225, 227);
+    color: rgb(225, 225, 227);
+    &::placeholder {
+        color: rgb(116, 116, 116);
+    }
+}
+
+.LoginLogBtnCon {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    button {
+        width: 60%;
+        height: 35px;
+        cursor: pointer;
+        border: 2px solid rgb(225, 225, 227);
+        // background-color: $login-icon-btn-color;
+        background-color: rgb(20, 20, 22);
+        outline: none;
+        // border: none;
+        border-radius: 10px;
+        font-size: 18px;
+        // font-weight: bold;
+        color: rgb(225, 225, 227);
+    }
+}
+
+// .LoginLogBtnCon {
+//     button {
+//         width: 60%;
+//         height: 45px;
+//         cursor: pointer;
+//         border: 2px solid white;
+//         // background-color: $login-icon-btn-color;
+//         background-color: rgb(24, 24, 24);
+//         outline: none;
+//         // border: none;
+//         border-radius: 10px;
+//         font-size: 18px;
+//         // font-weight: bold;
+//         color: white;
+//     }
+// } 
+
+.LoginQuestionCon {
+    // height: 10%;
+    padding: 20px;
+    // font-weight: bold;
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(116, 116, 116);
+
+
+}
+
+.RegisterLink {
+    color: rgb(225, 225, 227);
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+}

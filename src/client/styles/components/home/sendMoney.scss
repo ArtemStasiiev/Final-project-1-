@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$input-button-color: rgb(74, 84, 84);
+$input-value-color: rgb(98, 98, 100);
+$input-button-background-color: rgb(20, 20, 22);
+
+.Send-Money {
+    height: 50%;
+}
+
+.Send-Money__Form {
+    height: 87%;
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-around;
+    // flex-direction: column;
+    // border: 1px solid green;
+    .Send-Money__Recent,
+    .Recent-Operations__Today {
+        width: 15%;
+        background-color: rgb(40, 41, 46);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20px;
+        color: rgb(116, 116, 116);
+        font-size: 12px;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+    .contacts-con {
+        margin-top: 10px;
+        display: flex;
+        // border: 1px solid red;
+        width: 100%;
+        .plus-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            font-size: 35px;
+            background-color: rgb(41, 42, 47);
+            color: white;
+            // font-weight: 100;
+            cursor: pointer;
+            // margin-left: 10px;
+        }
+    }
+    .Send-Money__Photos {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-left: 13px;
+        cursor: pointer;
+    }
+    // .Send-Money__Inp-Con {
+    //     // border: 1px solid red;
+    //     // margin-top: 50px;
+    //     width: 100%;
+    //     height: 50px;
+    //     display: flex;
+    //     justify-content: space-evenly;
+    // }
+}
+
+// .Send-Money__Inputs {
+//     width: 50%;
+//     flex-wrap: wrap;
+//     display: flex;
+//     justify-content: center;
+// }
+
+// .sendMoney-input {
+//     width: 200px;
+//     height: 35px;
+//     border: none;
+//     outline: none;
+//     border-radius: 15px;
+//     padding-left: 25px;
+//     padding-right: 25px;
+//     color: rgb(225, 225, 227);
+//     font-size: 15px;
+//     border: 2px solid rgb(225, 225, 227);
+//     background-color: $input-button-background-color;
+// }
+// .Send-Money__Button-Con {
+//     width: 100%;
+//     display: flex;
+//     justify-content: center;
+// }
+// .Send-Money__Button {
+//     height: 35px;
+//     width: 150px;
+//     border: 2px solid rgb(225, 225, 227);
+//     background-color: $input-button-background-color;
+//     color: rgb(225, 225, 227);
+//     font-size: 18px;
+//     border-radius: 15px;
+//     cursor: pointer;
+//     outline: none;
+// }
+
+.Recent-Operations {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+    color: rgb(225, 225, 227);
+    border-radius: 10px;
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 50%;
+        // margin-left: 13px;
+        cursor: pointer;
+    }
+    .Recent-Operations__Right-Con {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-left: 10px;
+        // border: 1px solid red;
+        width: 87%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .Send-Money__Inputs__Input {
+        width: 60%;
+    }
+}

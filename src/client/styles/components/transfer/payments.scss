@@ -1,0 +1,39 @@
+.Payments {
+    height: 100%;
+    // border: 1px solid white;
+    .Payments-Items-Con {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        // border: 1px solid green;
+        height: 95%;
+        .Payments-Item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10px;
+            width: 120px;
+            height: 120px;
+            border: 2px solid rgb(40, 41, 46);
+            font-size: 14px;
+            border-radius: 10px;
+            cursor: pointer;
+            .Payments-Icon-Con {
+                width: 40px;
+                height: 40px;
+                background-color: rgb(48, 49, 53);
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 15px;
+            }
+            p {
+                text-align: center;
+                margin-top: 10px;
+                color: rgb(225, 225, 227);
+            }
+        }
+    }
+}
+

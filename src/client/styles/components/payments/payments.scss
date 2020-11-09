@@ -1,0 +1,98 @@
+$icon-background: rgb(56, 56, 56);
+
+.Payments {
+    height: 100%;
+}
+
+.Payments-Con {
+    width: 100%;
+    height: 60%;
+}
+
+.Payments-Con__Items {
+    width: 100%;
+    height: 87%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.TabList {
+    list-style-type: none;
+}
+
+.Payments-Con__Tab-List {
+    width: 60%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.Payments-Con__Tab {
+    width: 120px;
+    height: 120px;
+    border: 1px solid rgb(80, 80, 80);
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+        &:hover {
+            border: 1px solid white;
+        }
+}
+
+.Payments-Con__Icon-Con {
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Payments-Con__Icon-Con div {
+    width: 50%;
+    height: 70%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background-color: gray;
+    background-color: $icon-background; 
+}
+
+.Payments-Con__Icons {
+    font-size: 25px;
+}
+
+.Payments-Con__Name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 20%;
+    color: white;
+}
+
+.Send-Money-Transfer {
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid red;
+}
+
+.Send-Money-Transfer__Con{
+    height: 70%;
+    width: 90%;
+}
+
+@media screen and (max-width: 800px) {
+    .Payments-Con__Tab-List {
+        width: 95%;
+    }
+    .Payments-Con {
+        height: 50%;
+    }
+}

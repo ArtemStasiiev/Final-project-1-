@@ -1,0 +1,100 @@
+.Transfer-Field {
+    .Input-Header {
+        margin-top: 10px;
+        font-size: 12px;
+        color: rgb(116, 116, 116);
+        &:nth-child(2) {
+            margin-left: 40px;
+        }
+        &:nth-child(4) {
+            margin-left: 40px;
+        }
+    }
+    .Input-Form {
+        // border: 1px solid red;
+        display: flex;
+        justify-content: center;
+        input {
+            outline: none;
+            border: 2px solid rgb(40, 41, 46);
+            width: 70%;
+            height: 45px;
+            border-radius: 10px;
+            background-color: rgb(20, 20, 22);
+            padding-left: 10px;
+            color: rgb(116, 116, 116);
+            &::placeholder {
+                color: rgb(116, 116, 116)
+            }
+        }
+    }
+    .Ammount-Input {
+        outline: none;
+        border: 1px solid rgb(40, 41, 46);
+        width: 70%;
+        height: 45px;
+        border-radius: 10px;
+        background-color: rgb(20, 20, 22);
+        padding-left: 10px;
+        color: rgb(116, 116, 116);
+        margin-top: 25px;
+        &::placeholder {
+            color: rgb(116, 116, 116)
+        }
+    }
+    .Button-Con {
+        // border: 1px solid red;
+        padding: 0px 40px 0px 40px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        p {
+            margin-top: 10px;
+            width: 50%;
+            font-size: 12px;
+            color: rgb(116, 116, 116);
+            // border: 1px solid red;
+        }
+        button {
+            width: 40%;
+            border-radius: 10px;
+            background-color: rgb(48, 49, 53);
+            color: rgb(116, 116, 116);
+            border: none;
+            cursor: pointer;
+            outline: none;
+        }
+    }
+    .From-Card-Con,
+    .Swift-Transfers-Con {
+        display: flex;
+        // justify-content: space-around;
+        align-items: center;
+        margin-left: 40px;
+        width: 83%;
+        border: 2px solid rgb(40, 41, 46);
+        height: 100px;
+        margin-top: 20px;
+        border-radius: 10px;
+        padding-left: 40px;
+        cursor: pointer;
+        .Icon-Con {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgb(48, 49, 53);
+            .Card-Icon {
+                font-size: 20px;
+                color: rgb(225, 225, 227);
+            }
+        }
+        p {
+            margin-left: 20px;
+            font-size: 14px;
+            color: rgb(225, 225, 227);
+        }
+    }
+}

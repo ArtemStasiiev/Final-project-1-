@@ -1,0 +1,107 @@
+// $navbar-color: rgb(48, 48, 48);
+$navbar-color: rgb(30, 30, 32);
+$navbar-icon-background-color: rgb(35, 36, 40);
+$icons-color: rgb(100, 101, 108);
+$items-background-color_hover: rgb(62, 63, 67);
+$items-color_hover: rgb(166, 166, 169);
+@mixin item-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Navbar-Con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.PayPal-Icon {
+    font-size: 40px;
+    color: $icons-color;
+    margin-left: 50px;
+}
+
+.Navbar {
+    height: 64px;
+    width: 96%;
+    background-color: $navbar-color;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 5px;
+}
+
+.Navbar-Items {
+    list-style: none;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Navbar-Item {
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+    background-color: $navbar-icon-background-color;
+    box-shadow: 5px 5px 5px black;
+        &:hover {
+            background-color: $items-background-color_hover;
+            .Navbar-Items__Name {
+                color: $items-color_hover;
+            }
+            .Navbar-Items__Icon-Con {
+                color: $items-color_hover;
+            }
+        }
+}
+
+.Navbar-Items__Name {
+    @include item-center;
+    font-weight: bold;
+    height: 10%;
+    color: $icons-color;
+
+}
+
+.Navbar-Items__Icon-Con {
+    height: 70%;
+    @include item-center;
+    color: $icons-color;
+    font-size: 25px;
+}
+
+.AuthorizationIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    color: $icons-color;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+@media screen and (max-width: 800px) {
+    .PayPal-Icon {
+        font-size: 35px;
+    }
+    .Navbar-Items {
+        width: 280px;
+    }
+    .Navbar-Item {
+        width: 40px;
+        height: 40px;
+    }
+    .Navbar-Items__Name {
+        display: none;
+    }
+    .Navbar-Items__Icon-Con {
+        height: 100%;
+    }
+}

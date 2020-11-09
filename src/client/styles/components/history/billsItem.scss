@@ -1,0 +1,40 @@
+.BillsItem {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.BillsItem:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    // font-size: 20px;
+    // font-weight: bold;
+}
+
+.BillsItem__Left-Con {
+    // margin-left: 10px;
+    // border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img {
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+    .BillsItem__Title-Date {
+        margin-left: 15px;
+        .Date-Con {
+            font-size: 12px;
+            color: rgb(116, 116, 116);
+        }
+    }
+}
+
+.BillsItem__Right-Con {
+    margin-right: 20px;
+}
