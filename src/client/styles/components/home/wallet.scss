@@ -1,93 +1,202 @@
-$card-color: rgb(44, 44, 44);
-$card-text-color: rgb(225, 225, 227);
-$header-color: rgb(100, 101, 108);;
+@import '../../components/variables/variables.scss';
 
-.Wallet-Con {
+.wallet {
+  height: 50%;
+  .card {
     width: 100%;
-    height: 50%;
-}
-
-header {
-    padding: 5px;
-    border-bottom: 2px solid $header-color;
-    font-size: 14px;
-    color: $header-color;
-}
-
-.Card-Con {
-    height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: $card-text-color;
-}
-
-.Card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 450px;
-    height: 250px;
-    border-radius: 20px;
-    background-color: $card-color;
-    // border: 1px solid red;
-}
-
-.Card-Content {
-    // border: 1px solid white;
-    width: 400px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.Card__Usd-Number {
-    width: 100%;
-    // padding: 30px;
-    font-size: 14px;
-    // font-weight: bold;
-}
-
-.Card__Money-Con {
-    width: 100%;
-    font-size: 40px;
-    margin-top: 40px;
-}
-
-.Card__Number-Con {
-    width: 100%;
-    height: 90px;
-    font-size: 14px;
-    margin-top: 35px;
-    // font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.Card__Number-Con img {
-    // margin-right: 20px;
-    width: 60px;
-    height: 60px;
-    border: none;
-
-}
-
-.Card__Number {
-    margin-bottom: 15px;
-    // border: 1px solid red;
-}
-
-@media screen and (max-width: 800px) {
-    header {
-        font-size: 25px;
+    perspective: 1000px;
+    &:hover {
+      .card__inner {
+        transform: rotateY(180deg);
+      }
     }
-    .Card__Usd-Number,
-    .Card__Number-Con {
-        font-size: 15px;
+    .card__inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s;
+      transform-style: preserve-3d;
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      color: $regular-font-color;
+      .card__front {
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 96%;
+        height: 250px;
+        border-radius: 20px;
+        background-color: $card-color;
+        .card__content {
+          width: 90%;
+          height: 84%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .card__usd-number {
+            font-size: $font-size__regular;
+          }
+          .card__money-con {
+            font-size: 40px;
+          }
+          .card__number-con {
+            width: 100%;
+            height: 40px;
+            font-size: $font-size__regular;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            .card__number {
+              margin-bottom: 15px;
+            }
+            img {
+              width: 60px;
+              height: 60px;
+              border: none;
+            }
+          }
+        }
+      }
+      .card__back {
+        position: absolute;
+        width: 96%;
+        height: 250px;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform: rotateY(180deg);
+        border-radius: 20px;
+        background-color: $card-color;
+        p {
+          display: flex;
+          align-items: center;
+          margin-left: 6%;
+          // border: 1px solid red;
+          height: 20px;
+          margin-top: 5px;
+          font-size: 10px;
+          // text-align: center;
+        }
+        .card__back-line {
+          width: 100%;
+          height: 50px;
+          background-color: black;
+          // margin-top: 10px;
+        }
+        .card__back-cvv {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          width: 60%;
+          height: 30px;
+          background-color: gray;
+          margin-left: 6%;
+          span {
+            font-size: 12px;
+            margin-right: 10px;
+            color: black;
+            font-style: italic;
+          }
+        }
+        .card__back-bottom {
+          display: flex;
+          justify-content: space-between;
+          width: 87%;
+          height: 100px;
+          margin-left: 6%;
+          .card__qr {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            img {
+              width: 80px;
+            }
+            p {
+              display: flex;
+              flex-wrap: wrap;
+              margin-bottom: 20px;
+              a {
+                color: $regular-font-color;
+              }
+            }
+          }
+          .card__payments {
+            display: flex;
+            align-items: flex-end;
+            // border: 1px solid white;
+            .card__visa,
+            .card__master-card {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 60px;
+              height: 30px;
+              object-fit: cover;
+              background-color: white;
+              // margin-top: 70px;
+              margin-left: 5px;
+              img {
+                width: 35px;
+                height: 20px;
+                object-fit: cover;
+                // background-color: red;
+              }
+            }
+          }
+        }
+      }
     }
-    .Wallet-Con {
-        height: 380px;
+  }
+}
+
+
+
+@media screen and (max-width: 1220px) {
+  .wallet {
+    .card {
+      // margin-top: 10px;
+      .card__inner {
+        height: 220px;
+        .card-content {
+          height: 150px;
+        }
+      }
     }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .wallet {
+    .card {
+      padding-bottom: 30px;
+      .card__inner {
+        height: 220px;
+        width: 400px;
+        .card-content {
+          height: 150px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wallet {
+    .card {
+      // margin-top: 30px;
+      .card__inner {
+        height: 220px;
+        width: 400px;
+        .card-content {
+          height: 150px;
+        }
+      }
+    }
+  }
 }

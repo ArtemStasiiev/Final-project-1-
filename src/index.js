@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import {BrowserRouter as Router} from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
-import Root from './client/Root';
+import Root from './client/root.js';
 
 import UserContext from './client/context';
 import UserService from './client/services/auth.service';

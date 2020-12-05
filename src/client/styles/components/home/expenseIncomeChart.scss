@@ -1,24 +1,21 @@
-.expenseIncomeChartCon {
-    width: 100%;
-    // border: 1px solid red;
-}
+@import '../../components/variables/variables.scss';
 
-.tabList {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-between;
-    .tab {
-        width: 50%;
-        text-align: center;
-        font-size: 14px;
-        height: 30px;
-        border-bottom: 2px solid rgb(116, 116, 116);
-        color: rgb(116, 116, 116);
-        cursor: pointer;
-        outline: none;
-        &:hover {
-            border-bottom: 2px solid rgb(253, 57, 17);
-            color: rgb(253, 57, 17);
-        }
+.tab-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  .tab {
+    width: 50%;
+    text-align: center;
+    font-size: 14px;
+    height: 30px;
+    border-bottom: 2px solid $header-color;
+    color: $header-color;
+    cursor: pointer;
+    outline: none;
+    &:hover {
+      border-bottom: 2px solid $tab-color-hover;
+      color: $tab-color-hover;
     }
+  }
 }

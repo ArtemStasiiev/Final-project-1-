@@ -1,7 +1,11 @@
-.ExpenseChartCon {
-    width: 100%;
+.expense-chart {
     height: 65%;
     display: flex;
-    justify-content: center;
     align-items: flex-end;
+}
+
+@media screen and (max-width: 1000px) {
+    .expense-chart {
+        margin-top: 30px;
+    }
 }

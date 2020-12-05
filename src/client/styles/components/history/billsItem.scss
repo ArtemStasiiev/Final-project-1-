@@ -1,40 +1,41 @@
-.BillsItem {
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-    border-radius: 10px;
-    margin-top: 10px;
-}
+@import "../../components/variables/variables.scss";
 
-.BillsItem:hover {
+.bills__item {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $font-size__regular;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: $regular-font-color;
+  &:hover {
     background-color: rgba(0, 0, 0, 0.3);
-    // font-size: 20px;
-    // font-weight: bold;
-}
-
-.BillsItem__Left-Con {
-    // margin-left: 10px;
-    // border: 1px solid red;
+    cursor: pointer;
+  }
+  .bills__item-left {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    img {
-        border-radius: 50%;
-        width: 40px;
-        height: 40px;
-        object-fit: cover;
+    .bills__img-con {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 40px;
+      height: 40px;
+      background-color:rgb(45, 48, 55);
+      border-radius: 50%;
+      img {
+        width: 25px;
+        height: 25px;
+      }
     }
-    .BillsItem__Title-Date {
-        margin-left: 15px;
-        .Date-Con {
-            font-size: 12px;
-            color: rgb(116, 116, 116);
-        }
+    .bills__item-title-date {
+      margin-left: 15px;
+      p {
+        font-size: $font-size__small;
+        color: $price-date-color;
+      }
     }
-}
-
-.BillsItem__Right-Con {
-    margin-right: 20px;
+  }
 }

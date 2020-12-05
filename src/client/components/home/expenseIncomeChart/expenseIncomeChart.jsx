@@ -33,75 +33,68 @@ export default function expenseIncomeChart() {
   };
 
   return (
-    <div className="expenseIncomeChartCon">
-      <Tabs>
-        <TabList>
-          <div className="tabList">
+    <Tabs>
+      <TabList>
+        <div className="tab-list">
+          <Tab className="tab">Expenses</Tab>
+          <Tab className="tab">Income</Tab>
+        </div>
+      </TabList>
 
-            <Tab className="tab">Expenses</Tab>
-            <Tab className="tab">Income</Tab>
-          </div>
-        </TabList>
-
-        <TabPanel>
-          <div>
-            <Line
-              options={{
-                responsive: true,
-                scales: {
-                  xAxes: [
-                    {
-                      gridLines: {
-                        display: false,
-                      },
-                    },
-                  ],
-                  yAxes: [
-                    {
-                      gridLines: {
-                        display: false,
-                      },
-                    },
-                  ],
+      <TabPanel>
+        <Line
+          options={{
+            responsive: true,
+            scales: {
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false,
+                  },
                 },
-              }}
-              legend={{
-                display: false,
-              }}
-              data={expensesData}
-            />
-          </div>
-        </TabPanel>
-        <TabPanel>
-          <div>
-            <Line
-              options={{
-                responsive: true,
-                scales: {
-                  xAxes: [
-                    {
-                      gridLines: {
-                        display: false,
-                      },
-                    },
-                  ],
-                  yAxes: [
-                    {
-                      gridLines: {
-                        display: false,
-                      },
-                    },
-                  ],
+              ],
+              yAxes: [
+                {
+                  gridLines: {
+                    display: false,
+                  },
                 },
-              }}
-              legend={{
-                display: false,
-              }}
-              data={incomesData}
-            />
-          </div>
-        </TabPanel>
-      </Tabs>
-    </div>
+              ],
+            },
+          }}
+          legend={{
+            display: false,
+          }}
+          data={expensesData}
+        />
+      </TabPanel>
+      <TabPanel>
+        <Line
+          options={{
+            responsive: true,
+            scales: {
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false,
+                  },
+                },
+              ],
+              yAxes: [
+                {
+                  gridLines: {
+                    display: false,
+                  },
+                },
+              ],
+            },
+          }}
+          legend={{
+            display: false,
+          }}
+          data={incomesData}
+        />
+      </TabPanel>
+    </Tabs>
   );
 }

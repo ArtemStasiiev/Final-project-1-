@@ -1,40 +1,30 @@
+@import "../../components/variables/variables.scss";
 
-
-
-.TransactionsItem {
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-    border-radius: 10px;
-    margin-top: 10px;
-}
-
-.TransactionsItem:hover {
+.transactions__item {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $font-size__regular;
+  border-radius: 10px;
+  margin-top: 10px;
+  color: $regular-font-color;
+  &:hover {
     background-color: rgba(0, 0, 0, 0.3);
-    // font-size: 20px;
-    // font-weight: bold;
-}
-
-.TransactionsItem__Left-Con {
-    // margin-left: 10px;
-    // border: 1px solid red;
+    cursor: pointer;
+  }
+  .transactions__item-left {
     display: flex;
     align-items: center;
-    // justify-content: space-between;
-    width: 50%;
+    width: 250px;
     img {
-        width: 40px;
-        height: 40px;
-        object-fit: cover;
-        border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%;
     }
-    div {
-        margin-left: 15px;
+    p {
+      margin-left: 15px;
     }
+  }
 }
-
-// .TransactionsItem__Right-Con {
-//     margin-right: 10px;
-// }

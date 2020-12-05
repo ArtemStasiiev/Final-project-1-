@@ -1,0 +1,53 @@
+$card-color: rgb(44, 44, 44);
+$regular-font-color: rgb(225, 225, 227);
+$header-color: rgb(100, 101, 108);
+$tab-color-hover: rgb(253, 57, 17);
+$label-color: rgb(40, 41, 46);
+$price-date-color: rgb(116, 116, 116);
+$line-color__green: rgb(35, 191, 126);
+$icon-con-color: rgb(48, 49, 53);
+$navbar-color: rgb(30, 30, 32);
+$navbar-icon__background-color: rgb(35, 36, 40);
+$navbar__icon-color: rgb(100, 101, 108);
+$font-size__small: 12px;
+$font-size__regular: 14px;
+
+@mixin object-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 20px;
+  background-color: $label-color;
+  color: $price-date-color;
+  font-size: 12px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+@mixin label__small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $font-size__small;
+  width: 50px;
+  height: 20px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-color: $label-color;
+  color: $price-date-color;
+}
+
+h4 {
+    padding: 5px;
+    border-bottom: 2px solid $header-color;
+    font-size: 1em;
+    color: $header-color;
+    font-weight: normal;
+}

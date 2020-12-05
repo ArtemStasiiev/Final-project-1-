@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import Contacts from "./contacts/contacts";
-import { contactsItem } from "../../../config/data.config";
 import "../../../styles/components/transfer/sendMoney.scss";
-export default function SendMoney() {
-  const [persons] = useState(contactsItem);
+
+export default function SendMoney(props) {
+  const [persons] = useState(props.contactsItem);
   const [word, setWord] = useState("");
   const [filterDisplay, setFilterDisplay] = useState(persons);
 
@@ -23,32 +22,27 @@ export default function SendMoney() {
   };
 
   return (
-    <div className="Send-Money">
-      <header>Send money</header>
-      <div className="Send-Money__Input-Con">
+    <section className="send-money">
+      <h4>Send money</h4>
+      <div className="send-money__input-con">
         <input
           type="text"
           placeholder="Enter name"
           onChange={(e) => handleChange(e.target.value)}
         />
-        <p>or choose from list</p>
+        <label>or choose from list</label>
       </div>
-
-      <header>Contacts</header>
-      <div className="Send-Money__Contacts-Con">
+      <h4>Contacts</h4>
+      <div className="send-money__contacts">
         {filterDisplay.map((person, i) => (
           <ul key={i}>
-            <li className="Contacts-Item">
-              <img
-                className="listImg"
-                src={require(`../../../../img/${person.image}`)}
-                alt=""
-              />
+            <li className="send-money__contacts-item">
+              <img src={require(`../../../../img/${person.image}`)} alt="" />
               <p>{person.name}</p>
             </li>
           </ul>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

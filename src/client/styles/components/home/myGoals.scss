@@ -1,57 +1,45 @@
-.myGoals {
-    section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 12px;
-        width: 50px;
-        height: 20px;
-        // border: 1px solid red;
-        border-bottom-left-radius: 3px;
-        border-bottom-right-radius: 3px;
-        background-color: rgb(40, 41, 46);
-        color: rgb(116, 116, 116);
-        // font-weight: bold;
-    }
-    .myGoalsItemsCon {
-        // margin-top: 10px;
-        // border: 1px solid green;
-        font-size: 12px;
-        .myGoalsItem {
-            width: 100%;
-            margin-top: 5px;
-            .myGoalItemTop,
-            .myGoalItemBottom {
-                display: flex;
-                justify-content: space-between;
-                button {
-                    background-color: rgb(20, 20, 22);
-                    color: rgb(104, 104, 104);
-                    border: none;
-                    cursor: pointer;
-                    outline: none;
-                    font-size: 12px;
-                }
-                span {
-                    color: rgb(116, 116, 116);
-                }
-                .myGoalLineBackground {
-                    width: 200px;
-                    height: 5px;
-                    border-radius: 5px;
-                    // border: 1px solid white;
-                    background-color: rgba(0, 0, 0, 0.3);
-                    margin-top: 5px;
-                    .myGoalLine {
-                        width: 70%;
-                        height: 4px;
-                        border-radius: 5px;
-                        background-color: rgb(35, 191, 126);
-                    }
-                }
-                // border: 1px solid white;
-            }
-        }
-    }
-}
+@import '../../components/variables/variables.scss';
 
+.my-goals {
+  label {
+    @include label__small;
+  }
+  .my-goals__items {
+    font-size: $font-size__small;
+    list-style-type: none;
+    color: $regular-font-color;
+    .my-goals__item {
+      width: 100%;
+      margin-top: 10px;
+      .my-goal__item-top,
+      .my-goal__item-bottom {
+        display: flex;
+        justify-content: space-between;
+        button {
+          background-color: rgb(20, 20, 22);
+          color: $price-date-color;
+          border: none;
+          cursor: pointer;
+          outline: none;
+          font-size: $font-size__small;
+        }
+        span {
+          color: $price-date-color;
+        }
+        .my-goal__line-background {
+          width: 200px;
+          height: 5px;
+          border-radius: 5px;
+          background-color: rgba(0, 0, 0, 0.3);
+          margin-top: 5px;
+          .my-goal__line {
+            width: 70%;
+            height: 4px;
+            border-radius: 5px;
+            background-color: $line-color__green;
+          }
+        }
+      }
+    }
+  }
+}

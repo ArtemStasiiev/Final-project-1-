@@ -1,69 +1,108 @@
-import React from 'react';
-import '../../styles/components/navbar.scss';
-import { NavLink } from 'react-router-dom';
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaypal } from "@fortawesome/free-brands-svg-icons";
-import { faHome, faCommentDollar, faChartPie, faChartLine, faHistory, faUserAlt } from "@fortawesome/free-solid-svg-icons";
-// import { faCommentDollar } from "@fortawesome/free-solid-svg-icons";
-// import { faChartPie } from "@fortawesome/free-solid-svg-icons";
-// import { faChartLine } from "@fortawesome/free-solid-svg-icons";
-// import { faHistory } from "@fortawesome/free-solid-svg-icons";
-// import { faUserAlt } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
+import "../../styles/components/navbar.scss";
+import AccountPhoto from "../../../img/face-photo(17).jfif";
+import { NavLink } from "react-router-dom";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faPaypal } from "@fortawesome/free-brands-svg-icons";
+import Paypal from '../../../img/paypal.svg';
+import HistoryClock from '../../../img/history-clock.svg';
+import LineChart from '../../../img/line-chart.svg';
+import PieChart from '../../../img/pie-chart.svg';
+import Transfer from '../../../img/transfer.svg';
+import Home from '../../../img/home.svg';
+import Settings from '../../../img/gear-option.svg';
+import Notification from '../../../img/notification.svg';
+// import {
+//   faHome,
+//   faCommentDollar,
+//   faChartPie,
+//   faChartLine,
+//   faHistory,
+//   faCog,
+//   faBell
+// } from "@fortawesome/free-solid-svg-icons";
 
 const navbar = () => (
-    <div className="Navbar-Con">
-        <div className="Navbar">
-            <FontAwesomeIcon icon={faPaypal} className="PayPal-Icon" />
-            <div className="Navbar-Items">
-                <NavLink to="/" style={{ textDecoration: 'none' }}>
-                    <div className="Navbar-Item">
-                        <div className="Navbar-Items__Icon-Con">
-                            <FontAwesomeIcon icon={faHome} />
-                        </div>
+  <div className="navbar-con">
+    <nav className="navbar">
+      <NavLink exact to="/" className="paypal__icon">
+        <img src={Paypal} alt="" style={{ width: '100px'}}/>
+      </NavLink>
+      <div className="navbar__items">
+        <NavLink
+          exact
+          to="/"
+          className="navbar__item"
+          activeClassName="main-nav-active"
+          style={{ textDecoration: "none" }}
+        >
+          <div className="navbar__items-icon">
+            <img src={Home} alt="" />
+          </div>
+          
+          <div className="navbar__items-name">Home</div>
+        </NavLink>
+        <NavLink
+          exact
+          to="/transfers"
+          className="navbar__item"
+          activeClassName="main-nav-active"
+          style={{ textDecoration: "none" }}
+        >
+          <div className="navbar__items-icon">
+            <img src={Transfer} alt="" />
+          </div>
 
-                        <div className="Navbar-Items__Name">Home</div>
-                    </div>
-                </NavLink>
-                <NavLink to="/transfers" style={{ textDecoration: 'none' }}>
-                    <div className="Navbar-Item">
-                        <div className="Navbar-Items__Icon-Con">
-                            <FontAwesomeIcon icon={faCommentDollar} />
-                        </div>
+          <div className="navbar__items-name">Transfer</div>
+        </NavLink>
+        <NavLink
+          exact
+          to="/spending"
+          className="navbar__item"
+          activeClassName="main-nav-active"
+          style={{ textDecoration: "none" }}
+        >
+          <div className="navbar__items-icon">
+            <img src={PieChart} alt="" />
+          </div>
 
-                        <div className="Navbar-Items__Name">Transfer</div>
-                    </div>
-                </NavLink>
-                <NavLink to="/spending" style={{ textDecoration: 'none' }}>
-                    <div className="Navbar-Item">
-                        <div className="Navbar-Items__Icon-Con">
-                            <FontAwesomeIcon icon={faChartPie} />
-                        </div>
+          <div className="navbar__items-name">Spending</div>
+        </NavLink>
+        <NavLink
+          exact
+          to="/investing"
+          className="navbar__item"
+          activeClassName="main-nav-active"
+          style={{ textDecoration: "none" }}
+        >
+          <div className="navbar__items-icon">
+            <img src={LineChart} alt="" />
+          </div>
+          <div className="navbar__items-name">Investing</div>
+        </NavLink>
+        <NavLink
+          exact
+          to="/history"
+          className="navbar__item"
+          activeClassName="main-nav-active"
+          style={{ textDecoration: "none" }}
+        >
+          <div className="navbar__items-icon">
+            <img src={HistoryClock} alt="" />
+          </div>
 
-                        <div className="Navbar-Items__Name">Spending</div>
-                    </div>
-                </NavLink>
-                <NavLink to="/investing" style={{ textDecoration: 'none' }}>
-                    <div className="Navbar-Item">
-                        <div className="Navbar-Items__Icon-Con">
-                            <FontAwesomeIcon icon={faChartLine} />
-                        </div>
-                        <div className="Navbar-Items__Name">Investing</div>
-                    </div>
-                </NavLink>
-                <NavLink to="/history" style={{ textDecoration: 'none' }}>
-                    <div className="Navbar-Item">
-                        <div className="Navbar-Items__Icon-Con">
-                            <FontAwesomeIcon icon={faHistory} />
-                        </div>
-
-                        <div className="Navbar-Items__Name">History</div>
-                    </div>
-                </NavLink>
-            </div>
-            <FontAwesomeIcon icon={faUserAlt} className="AuthorizationIcon" />
-        </div>
-    </div>
+          <div className="navbar__items-name">History</div>
+        </NavLink>
+      </div>
+      <div className="navbar__settings">
+        <NavLink exact to="/history">
+          <img src={Notification} alt=""/>
+        </NavLink>
+        <img src={Settings} alt=""/>
+        <img src={AccountPhoto} alt="" />
+      </div>
+    </nav>
+  </div>
 );
 
 export default navbar;

@@ -1,28 +1,35 @@
-.Investing {
-    background-color: rgb(24, 24, 24);
-    width: 96%;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-    overflow: hidden;
-    overflow-y: scroll;
+.investing {
+  width: 96%;
+  display: grid;
+  justify-content: space-between;
+  overflow: hidden;
+  grid-template-columns: repeat(2, 49%);
+
+  // .investing__left,
+  // .investing__right {
+  //   width: 49%;
+  //   border-radius: 10px;
+  // }
 }
 
-.Investing__Left-Con,
-.Investing__Right-Con  {
-    width: 49%;
-    height: 100%;
+@media screen and (max-width: 1200px) {
+  .investing {
+    grid-template-columns: 720px;
+    justify-content: center;
+    .investing__right {
+      padding-bottom: 20px;
+    }
+  }
 }
 
-@media screen and (max-width: 800px) {
-    .Investing {
-        flex-direction: column;
-        overflow: auto;
-        height: 1300px;
-    }
-    .Investing__Left-Con,
-    .Investing__Right-Con  {
-        width: 100%;
-        height: 100%;
-    }
+@media screen and (max-width: 780px) {
+  .investing {
+    grid-template-columns: 520px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .investing {
+    grid-template-columns: 420px;
+  }
 }

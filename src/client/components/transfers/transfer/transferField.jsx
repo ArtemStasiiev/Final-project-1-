@@ -1,47 +1,88 @@
-import React from 'react';
-import '../../../styles/components/transfer/transferField.scss'
-import { faCreditCard, faMoneyCheckAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React, { useState } from "react";
+import "../../../styles/components/transfer/transferField.scss";
+// import Briefcase from '../../../../img/briefcase.svg';
+// import CreditCards from '../../../../img/credit-cards.svg';
+// import DebitCard from "../../../../img/blue_card.png";
+import NumberFormat from "react-number-format";
 
-export default function TransferField() {
-    const handleChange = () => {
-        console.log('1111')
-    }
-    return (
-        <div className="Transfer-Field">
-            <header>Transfer</header>
-            <p className="Input-Header">From</p>
-            <form className="Input-Form">
-                <input type="text"/>
-            </form>
+export default function TransferField(props) {
+  const [cardNumber, setCardNumber] = useState("");
+  const [sum, setSum] = useState(0);
 
-            <p className="Input-Header">To</p>
-            <form className="Input-Form">
-                <input type="text"/>
-            </form>
+  const handleCardNumberChange = (event) => {
+    setCardNumber(event.target.value);
+  };
 
-            <form className="Input-Form">
-                <input type="text" className="Ammount-Input" />
-            </form>
+  const handleSumChange = (event) => {
+    setSum(event.target.value);
+  };
 
-            <div className="Button-Con" onClick={handleChange}>
-                <p>the commission will be calculated automatically</p>
-                <button>Transfer money</button>
-            </div>
-
-            <div className="From-Card-Con">
-                <div className="Icon-Con">
-                    <FontAwesomeIcon icon={faCreditCard} className="Card-Icon" />
-                </div>
-                <p>From card to card</p>
-            </div>
-
-            <div className="Swift-Transfers-Con">
-                <div className="Icon-Con">
-                    <FontAwesomeIcon icon={faMoneyCheckAlt} className="Card-Icon" />
-                </div>
-                <p>SWIFT transfers</p>
-            </div>
+  const clearInputValues = () => {
+      setCardNumber("");
+      setSum(0);
+  };
+  return (
+    <section className="transfer">
+      <h4>Transfer</h4>
+      <label className="transfer__input-header">From</label>
+      <div className="transfer__my-card-con">
+        <div className="transfer__my-card">
+          <div className="transfer__my-card-info">
+            <p>Mastercard **** 4439</p>
+            <p>$16.234</p>
+          </div>
+          <img src={require(`../../../../img/${props.debitCard}`)} alt="" />
         </div>
-    )
+      </div>
+      <label className="transfer__input-header">To</label>
+      <div className="transfer__input-form-con">
+        <form className="transfer__input-form">
+          <NumberFormat
+            type="text"
+            name="cardNumber"
+            format="#### #### #### ####"
+            mask=" "
+            autoComplete="off"
+            required
+            onChange={handleCardNumberChange}
+            value={cardNumber}
+            className="transfer__input-first"
+          />
+          <label htmlFor="">
+            <span>Card number</span>
+          </label>
+        </form>
+      </div>
+      <label className="transfer__input-header">Amount, USD</label>
+      <form className="transfer__input-form">
+        <NumberFormat
+          type="text"
+          name="cardNumber"
+          thousandSeparator={true}
+          prefix={"$"}
+          autoComplete="off"
+          required
+          onChange={handleSumChange}
+          value={sum}
+          className="transfer__input-second"
+        />
+      </form>
+      <div className="transfer__button-con">
+        <p>the commission will be calculated automatically</p>
+        <button onClick={() => clearInputValues()}>Transfer money</button>
+      </div>
+      <div className="transfer__from-card">
+        <div className="transfer__icon-con">
+          <img src={require(`../../../../img/${props.creditCards}`)} alt="creditCards" style={{ width: '25px', height: '25px' }}/>
+        </div>
+        <p>From card to card</p>
+      </div>
+      <div className="transfer__transfers">
+        <div className="transfer__icon-con">
+          <img src={require(`../../../../img/${props.briefcase}`)} alt="briefcase" style={{ width: '25px' }}/>
+        </div>
+        <p>SWIFT transfers</p>
+      </div>
+    </section>
+  );
 }

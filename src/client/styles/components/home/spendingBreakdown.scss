@@ -1,44 +1,27 @@
-.Spending-Breakdown {
-    width: 100%;
-    height: 35%;
-    // border: 1px solid red;
-}
+@import "../../components/variables/variables.scss";
 
-.Spending-Breakdown__Items {
-    margin-top: 10px;
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-}
-
-.Spending-Breakdown__Type {
-    // margin-left: 10px;
-    font-size: 14px;
-} 
-
-.Spending-Breakdown__Price {
+.spending-breakdown__items {
+  margin-top: 10px;
+  list-style-type: none;
+  .spending-breakdown__type {
+    font-size: $font-size__regular;
+    color: $regular-font-color;
+  }
+  .spending-breakdown__price {
     display: flex;
     justify-content: space-between;
-    // margin-right: 10px;
-    color: rgb(104, 104, 104);
-    font-size: 12px;
-    // margin-left: 10px;
-    .Spending-Breakdown__Line-Background {
-        width: 200px;
-        height: 5px;
+    color: $price-date-color;
+    font-size: $font-size__small;
+    .spending-breakdown__line-background {
+      width: 200px;
+      height: 5px;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.3);
+      .spending-breakdown__line {
+        height: 4px;
         border-radius: 5px;
-        background-color: rgba(0, 0, 0, 0.3);
-        .Spending-Breakdown__Line {
-            width: 70%;
-            height: 4px;
-            border-radius: 5px;
-            background-color: rgb(35, 191, 126);
-        }
+        background-color: $line-color__green;
+      }
     }
-}
-
-@media screen and (max-width: 800px) {
-    .Spending-Breakdown__Items {
-        font-size: 17px;
-    }
+  }
 }

@@ -1,43 +1,34 @@
-.Expenses-Income {
-    display: flex;
-    justify-content: space-between;
-    height: 20%;
-}
+@import "../../components/variables/variables.scss";
 
-.Expenses,
-.Income {
+.expenses-income {
+  display: flex;
+  justify-content: space-between;
+  height: 20%;
+  .expenses,
+  .income {
     width: 49%;
-}
-
-.Expenses__Sum,
-.Income__Sum {
-    width: 100%;
+  }
+  .expenses__sum,
+  .income__sum {
     height: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
-    // font-weight: 600;
-    color: white;
-}
-
-.Expenses__Sum,
-.Income__Sum {
-    color: rgb(225, 225, 227);
-}
-
-.Expenses__Sum span,
-.Income__Sum span {
-    margin-left: 10px;
-    font-size: 20px;
-    margin-top: 20px;
-    color: rgb(104, 104, 104);
+    color: $regular-font-color;
+    span {
+      margin-left: 10px;
+      font-size: 20px;
+      margin-top: 20px;
+      color: $price-date-color;
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {
-    .Expenses__Sum,
-    .Income__Sum {
-        height: 60%;
-        font-size: 35px;
-    }
+  .expenses__sum,
+  .income__sum {
+    height: 60%;
+    font-size: 35px;
+  }
 }

@@ -1,26 +1,32 @@
-.SafeToSpend-Border {
+@import '../../components/variables/variables.scss';
+
+.safe-to-spend__border {
   width: 170px;
   height: 170px;
-  border: 10px solid rgb(35, 191, 126);
+  border: 10px solid $line-color__green;
   border-radius: 50%;
   margin: 20px auto;
   display: flex;
   justify-content: center;
-//   flex-direction: column;
   align-items: center;
-//   font-size: 10px;
-  .SafeToSpend-Content {
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      font-size: 12px;
-      line-height: 30px;
-      .SafeToSpend-Ammount {
-          font-size: 20px;
-          color: rgb(225, 225, 227);
-      }
-      .SafeToSpend-Date {
-          color: rgb(72, 73, 78);
-      }
+  .safe-to-spend__content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+    .safe-to-spend__ammount {
+      font-size: 20px;
+      color: $regular-font-color;
+    }
+    .safe-to-spend__date {
+      color: rgb(72, 73, 78);
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .safe-to-spend {
+    margin-top: 30px;
   }
 }

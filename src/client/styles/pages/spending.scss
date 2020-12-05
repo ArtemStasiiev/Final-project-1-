@@ -1,48 +1,50 @@
-.Spending {
-    // background-color: rgb(75, 75, 75);
-    width: 96%;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-}
+@import "../components/variables/variables.scss";
 
-.Spending__Left-Con,
-.Spending__Right-Con {
-    width: 45%;
-    height: 100%;
-}
-
-.Spending__Left-Con {
-    margin-left: 15px;
+.spending {
+  width: 96%;
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  grid-gap: 55px;
+  .spending__left {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    .Spending-Info__Lines {
-        width: 100%;
+    .spending__info {
+      height: 20%;
+      .spending__info-sum {
+        height: 70%;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
+        font-size: 50px;
+        color: rgb(19, 255, 221);
+        span {
+          margin-left: 10px;
+          font-size: 20px;
+          margin-top: 20px;
+          color: $price-date-color;
+        }
+      }
+      .spending__info-lines {
         display: flex;
         justify-content: space-between;
-        // border: 1px solid red;
+      }
     }
-}
-  
-.Spending__Right-Con {
-    margin-right: 15px;
+    h4:nth-child(2) {
+      margin-top: 20px;
+    }
+  }
 }
 
-@media screen and (max-width: 800px) {
-    .Spending {
-        display: flex;
-        flex-direction: column-reverse;
-        height: 1100px;
-        justify-content: flex-end;
-
+@media screen and (max-width: 1000px) {
+  .spending {
+    grid-template-columns: 100%;
+    .spending__left {
+      grid-row: 2;
+      padding-bottom: 20px;
     }
-    .Spending__Left-Con,
-    .Spending__Right-Con {
-        width: 100%;
-        height: 50%;
+    .spending__right {
+      grid-row: 1;
     }
-    .Spending__Right-Con {
-        height: 40%;
-    }
+  }
 }

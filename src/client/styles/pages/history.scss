@@ -1,52 +1,36 @@
-.HistoryCon {
-    // background-color: rgb(75, 75, 75);
-    width: 96%;
-    display: flex;
-    justify-content: space-between;
-    border-radius: 10px;
-}
+@import "../components/variables/variables.scss";
 
-.TransactionsHistory,
-.BillsHistory {
-    width: 48%;
-    header {
-        border-bottom: none;
+.history {
+  width: 96%;
+  display: grid;
+  grid-template-columns: repeat(2, 48%);
+  grid-gap: 55px;
+  .history__transactions-items-today {
+    padding-bottom: 10px;
+  }
+  .history__transactions-items-yesterday,
+  .history__transactions-items-days-ago {
+    border-top: 2px solid $header-color;
+    padding-bottom: 10px; 
+  }
+  .history__bills-items-con {
+    padding-bottom: 10px;
+    border-top: 2px solid $header-color;
+    &:nth-child(1) {
+      border: none;
     }
-}
-
-.TransactionsHistory__Items,
-.BillsHistory__Items {
-    height: 94%;
-}
-.BillsHistory__Items-Month-Con {
-    height: 33%;
-    // border: 1px solid red;
-}
-.TransactionsHistory__Items-Days-Ago {
-    height: 20%;
-    border-top: 2px solid rgb(40, 41, 46);
-}
-.TransactionsHistory__Items-Today,
-.TransactionsHistory__Items-Yesterday {
-    border-top: 2px solid rgb(40, 41, 46);
-    height: 40%;
-}
-.BillsHistory__Items-Month-Con {
-    height: 33%;
-    border-top: 2px solid rgb(40, 41, 46);
     .scroll-con {
-        height: 89%;
-        overflow: hidden;
-        overflow-y: scroll;
-        &::-webkit-scrollbar {
-            display: none;
-          }
+      height: 157px;
+      overflow: hidden;
+      overflow-y: scroll;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
-}
-
-.TransactionsHistory__Date-Con,
-.BillsHistory__Items-Date-Con {
-    width: 10%;
+  }
+  .history__transactions-date,
+  .history__bills-items-date {
+    width: 70px;
     background-color: rgb(40, 41, 46);
     display: flex;
     justify-content: center;
@@ -56,16 +40,15 @@
     font-size: 12px;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
+  }
 }
 
+
 @media screen and (max-width: 800px) {
-    .HistoryCon {
-        flex-direction: column;
-        height: 1200px;
+  .history {
+    grid-template-columns: 100%;
+    .history__bills {
+      padding-bottom: 20px;
     }
-    .TransactionsHistory,
-    .BillsHistory {
-        width: 100%;
-        height: 50%;
-    }
+  }
 }
