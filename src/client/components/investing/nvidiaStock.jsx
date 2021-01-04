@@ -44,8 +44,6 @@ const NvidiaStock = () => {
         },
       ]}
       layout={{
-        // width: 720,
-        // height: 640,
         title: "Nvidia stock chart",
         plot_bgcolor: "rgba(0, 0, 0, 0.1)",
         objectFit: "cover",

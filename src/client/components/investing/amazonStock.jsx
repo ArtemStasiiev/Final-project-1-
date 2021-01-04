@@ -44,8 +44,6 @@ const AmazonStock = () => {
         },
       ]}
       layout={{
-        // width: 520,
-        // height: 640,
         autosize: true,
         title: "Amazon stock chart",
         plot_bgcolor: "rgba(0, 0, 0, 0.1)",

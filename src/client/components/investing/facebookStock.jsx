@@ -44,8 +44,6 @@ const FacebookStock = () => {
         },
       ]}
       layout={{
-        // width: 720,
-        // height: 640,
         title: "Facebook stock chart",
         plot_bgcolor: "rgba(0, 0, 0, 0.1)",
         objectFit: "cover",

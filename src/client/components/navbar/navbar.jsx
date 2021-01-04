@@ -2,8 +2,6 @@ import React from "react";
 import "../../styles/components/navbar.scss";
 import AccountPhoto from "../../../img/face-photo(17).jfif";
 import { NavLink } from "react-router-dom";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faPaypal } from "@fortawesome/free-brands-svg-icons";
 import Paypal from '../../../img/paypal.svg';
 import HistoryClock from '../../../img/history-clock.svg';
 import LineChart from '../../../img/line-chart.svg';
@@ -12,15 +10,6 @@ import Transfer from '../../../img/transfer.svg';
 import Home from '../../../img/home.svg';
 import Settings from '../../../img/gear-option.svg';
 import Notification from '../../../img/notification.svg';
-// import {
-//   faHome,
-//   faCommentDollar,
-//   faChartPie,
-//   faChartLine,
-//   faHistory,
-//   faCog,
-//   faBell
-// } from "@fortawesome/free-solid-svg-icons";
 
 const navbar = () => (
   <div className="navbar-con">

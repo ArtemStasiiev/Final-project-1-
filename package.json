@@ -33,8 +33,6 @@
     "rxjs": "^6.6.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts --max-old-space-size=8192 start",
     "build": "react-scripts build",
     "run": "node src/server/server.js",
@@ -60,6 +58,5 @@
   },
   "optionalDependencies": {
     "fsevents": "^2.2.1"
-  },
-  "homepage": "https://myusername.github.io/my-app"
+  }
 }

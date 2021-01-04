@@ -60,7 +60,6 @@ export default function Home() {
             {monthNames[new Date().getMonth()]}
           </label>
           {upcomingBillsData}
-          {/* // eslint-disable-next-line, jsx-a11y/heading-has-content */}
           <h4> </h4>
           <label className="home__upcoming-bills-month">
             {monthNames[new Date().getMonth() + 1 ]}

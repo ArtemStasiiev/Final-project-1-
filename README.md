@@ -7,7 +7,6 @@
 
 - [Introduction](#introduction)
 - [Build Process](#build-process)
-- [Link to website](#link-to-website)
 
 ## Introduction
 ---
@@ -25,7 +24,3 @@ This project is an alternative look at what PayPal might look like. Built with R
     Server has been started and is running on port 3001
 ``` 
 - After the node modules instalation write ```npm start``` to launch the project.
-
-## Link to website
----
-Here is a working live website: 

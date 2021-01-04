@@ -44,8 +44,6 @@ const TeslaStock = () => {
         },
       ]}
       layout={{
-        // width: 720,
-        // height: 640,
         title: "Tesla stock chart",
         plot_bgcolor: "rgba(0, 0, 0, 0.1)",
         objectFit: "cover",

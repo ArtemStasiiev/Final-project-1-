@@ -5,10 +5,9 @@ import UserContext from "../../context";
 
 const Signin = () => {
   const userService = useContext(UserContext);
-  // let redirectTimeout;
 
-  const [username, setUsername] = useState(""); //anna
-  const [password, setPassword] = useState(""); //12345678
+  const [username, setUsername] = useState(""); 
+  const [password, setPassword] = useState(""); 
   const [userData, setUserData] = useState(null);
 
   useEffect(() => {
@@ -25,7 +24,6 @@ const Signin = () => {
   const handlePassword = (e) => {
     setPassword(e.target.value);
   };
-  // useEffect(() => () => { clearTimeout(redirectTimeout) });
 
   const loginUser = async () => {
     if (!username || !password || !password) {

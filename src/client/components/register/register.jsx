@@ -2,14 +2,13 @@ import React, { useContext, useState } from "react";
 import "../../styles/components/register.scss";
 import { Link } from "react-router-dom";
 import UserContext from "../../context";
-
-// templates
 import Register from "./register";
+
 const BecomeClient = (props) => {
   const userService = useContext(UserContext);
-  const [username, setUsername] = useState(""); //anna
-  const [email, setEmail] = useState(""); //anna@gmail.com
-  const [password, setPassword] = useState(""); //12345678
+  const [username, setUsername] = useState(""); 
+  const [email, setEmail] = useState(""); 
+  const [password, setPassword] = useState(""); 
   const [submittedSuccessfully, setSubmittedSuccessfully] = useState(false);
   const role = "user";
 
