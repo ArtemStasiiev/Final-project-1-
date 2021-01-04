@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import "../../../styles/components/transfer/transferField.scss";
-// import Briefcase from '../../../../img/briefcase.svg';
-// import CreditCards from '../../../../img/credit-cards.svg';
-// import DebitCard from "../../../../img/blue_card.png";
 import NumberFormat from "react-number-format";
 
 export default function TransferField(props) {
@@ -20,6 +17,7 @@ export default function TransferField(props) {
   const clearInputValues = () => {
       setCardNumber("");
       setSum(0);
+      console.log(sum.length, cardNumber.length)
   };
   return (
     <section className="transfer">
@@ -57,7 +55,7 @@ export default function TransferField(props) {
       <form className="transfer__input-form">
         <NumberFormat
           type="text"
-          name="cardNumber"
+          name="ammount"
           thousandSeparator={true}
           prefix={"$"}
           autoComplete="off"
@@ -73,7 +71,7 @@ export default function TransferField(props) {
       </div>
       <div className="transfer__from-card">
         <div className="transfer__icon-con">
-          <img src={require(`../../../../img/${props.creditCards}`)} alt="creditCards" style={{ width: '25px', height: '25px' }}/>
+          <img src={require(`../../../../img/${props.creditCards}`)} alt="creditCards" style={{ width: '25px' }}/>
         </div>
         <p>From card to card</p>
       </div>

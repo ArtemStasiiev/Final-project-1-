@@ -13,6 +13,7 @@
     "chart.js": "^2.9.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "gh-pages": "^3.1.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.20",
     "mongoose-bcrypt": "^1.8.0",
@@ -32,7 +33,9 @@
     "rxjs": "^6.6.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts --max-old-space-size=8192 start",
     "build": "react-scripts build",
     "run": "node src/server/server.js",
     "dev": "nodemon src/server/server.js"
@@ -54,5 +57,9 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "optionalDependencies": {
+    "fsevents": "^2.2.1"
+  },
+  "homepage": "https://myusername.github.io/my-app"
 }

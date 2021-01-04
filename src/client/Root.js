@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import "./styles/components/variables/variables.scss";
 import "./styles/root.scss";
-import { Switch, Route, Link, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 import clientPrivate from "./hoc/client-private";
 import UserContext from "./context";
 
@@ -14,7 +14,6 @@ import TransfersPage from "./pages/transfers/transfers";
 import SpendingPage from "./pages/spending/spending";
 import InvestingPage from "./pages/investing/investing";
 import HistoryPage from "./pages/history/history";
-import AccountPage from "./pages/account";
 import NotFoundPage from "./pages/404";
 
 const Root = () => {
@@ -37,8 +36,7 @@ const Root = () => {
       setUserData(user);
     }
   }, []);
-  console.log(pathname);
-
+  
   return (
     <div className="container">
       {urls.includes(pathname) && <Navbar />}
@@ -63,7 +61,6 @@ const Root = () => {
             component={clientPrivate(InvestingPage)}
           />
           <Route path="/history" exact component={clientPrivate(HistoryPage)} />
-          <Route path="/account" exact component={clientPrivate(AccountPage)} />
           <Route path="*" exact component={NotFoundPage} />
         </Switch>
       </div>

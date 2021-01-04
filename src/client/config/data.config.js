@@ -9,9 +9,11 @@ module.exports = {
     upcomingBills: [
             { title: 'Netflix', price: 12.00, image: 'netflix.svg', id: 1, date: '2020-07-21' },
             { title: 'Apple TV', price: 10.00, image: 'apple.svg', id: 2, date: '2020-07-21' },
-            { title: '+38 063 56 87 154', price: 5.00, image: 'lifecell.svg', id: 3, date: '2020-07-21' }
+            { title: '+38 063 12 34 567', price: 5.00, image: 'lifecell.svg', id: 3, date: '2020-07-21' }
         ],
         monthNames: ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December",
+        "January", "February", "March", "April", "May", "June",
         "July", "August", "September", "October", "November", "December"
         ],
         spendingBreakdown: [
@@ -156,17 +158,17 @@ module.exports = {
         billsItems: [
             { title: 'Netflix', price: 12, image: 'netflix.svg', date: 'Mon, 25' },
             { title: 'Apple TV', price: 10, image: 'apple.svg', date: 'Fr, 17' },
-            { title: '+38 063 56 87 154', price: 5, image: 'lifecell.svg', date: 'Wen, 14' }
+            { title: '+38 063 12 34 567', price: 5, image: 'lifecell.svg', date: 'Wen, 14' }
         ],
         billsItemsMore: [
           { title: 'Netflix', price: 12, image: 'netflix.svg', date: 'Mon, 25' },
           { title: 'Apple TV', price: 10, image: 'apple.svg', date: 'Fr, 17' },
-          { title: '+38 063 56 87 154', price: 5, image: 'lifecell.svg', date: 'Wen, 14' },
+          { title: '+38 063 12 34 567', price: 5, image: 'lifecell.svg', date: 'Wen, 14' },
           { title: 'Netflix', price: 12, image: 'netflix.svg', date: 'Mon, 25' },
           { title: 'Apple TV', price: 10, image: 'apple.svg', date: 'Fr, 17' },
-          { title: '+38 063 56 87 154', price: 5, image: 'lifecell.svg', date: 'Wen, 14' },
+          { title: '+38 063 12 34 567', price: 5, image: 'lifecell.svg', date: 'Wen, 14' },
           { title: 'Netflix', price: 12, image: 'netflix.svg', date: 'Mon, 25' },
           { title: 'Apple TV', price: 10, image: 'apple.svg', date: 'Fr, 17' },
-          { title: '+38 063 56 87 154', price: 5, image: 'lifecell.svg', date: 'Wen, 14' }
+          { title: '+38 063 12 34 567', price: 5, image: 'lifecell.svg', date: 'Wen, 14' }
         ]
 };

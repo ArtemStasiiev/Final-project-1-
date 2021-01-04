@@ -4,7 +4,8 @@
   width: 96%;
   display: grid;
   grid-template-columns: repeat(2, 48%);
-  grid-gap: 55px;
+  // grid-gap: 55px;
+  justify-content: space-between;
   .spending__left {
     display: flex;
     flex-direction: column;

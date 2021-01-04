@@ -2,15 +2,19 @@
   width: 96%;
   display: grid;
   grid-template-columns: repeat(3, 32%);
-  grid-gap: 30px;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 1000px) {
   .transfer-con {
     grid-template-columns: 60%;
     justify-content: center;
+    .transfer__center {
+      margin-top: 10px;
+    }
     .transfer__right {
       padding-bottom: 20px;
+      margin-top: 10px;
     }
   }
 }
